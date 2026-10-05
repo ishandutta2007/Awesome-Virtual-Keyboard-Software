@@ -54,9 +54,9 @@ Below is a comparison of leading commercial and SaaS virtual keyboard products, 
 
 ## 🔓 Open-Source GitHub Repositories
 
-Below are top open-source virtual keyboard software projects, sorted by **GitHub Stars** (descending order). Each star badge links directly to the repository's stargazers page. 🌟💻
+Below are top open-source virtual keyboard software projects, sorted by **GitHub_Stars** (descending order). Each Stars_Badge links directly to the repository's stargazers page. 🌟💻
 
-| Project | Stars | Description & Key Features | Supported Platforms |
+| Project | GitHub_Stars | Description & Key Features | Supported Platforms |
 | :--- | :---: | :--- | :--- |
 | **[FlorisBoard](https://github.com/florisboard/florisboard)** | [![FlorisBoard Stars](https://img.shields.io/github/stars/florisboard/florisboard?style=social&color=white)](https://github.com/florisboard/florisboard/stargazers) | Modern open-source Android keyboard balancing privacy and clean UX with split/one-handed layouts, clipboard manager, and secondary layouts. | Android |
 | **[HeliBoard](https://github.com/HeliBorg/HeliBoard)** | [![HeliBoard Stars](https://img.shields.io/github/stars/HeliBorg/HeliBoard?style=social&color=white)](https://github.com/HeliBorg/HeliBoard/stargazers) | Leading privacy-focused AOSP-derived Android keyboard operating 100% offline with zero network permissions. | Android |
@@ -125,7 +125,7 @@ If you find this list helpful, please consider:
 
 - This directory is a **community-curated** resource and does not constitute endorsement. 🛑
 - On-screen keyboards can record sensitive input. Verify application permissions before installing. 🔒
-- GitHub star counts and pricing tiers are updated periodically. 📅
+- GitHub Stars_Counts and pricing tiers are updated periodically. 📅
 
 ---
 
