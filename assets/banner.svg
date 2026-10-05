@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="pinkOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <!-- Keycap Shadow/Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #cbd5e1;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #38bdf8;
+    }
+
+    /* Key Animation */
+    @keyframes keyPress {
+      0%, 100% { transform: translateY(0px); opacity: 0.8; }
+      50% { transform: translateY(6px); opacity: 1; filter: drop-shadow(0px 0px 8px #06b6d4); }
+    }
+    @keyframes waveGlow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    .key {
+      fill: #1e293b;
+      stroke: #334155;
+      stroke-width: 2;
+      rx: 8px;
+    }
+    .key-active {
+      animation: keyPress 3s infinite ease-in-out;
+    }
+    .key-active-2 {
+      animation: keyPress 3s infinite ease-in-out 1.5s;
+    }
+    .glow-wave {
+      animation: waveGlow 4s infinite ease-in-out;
+    }
+  </style>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Decorative Mesh / Background Key Grid (Deep Background Layer) -->
+  <g opacity="0.25" class="glow-wave">
+    <!-- Grid Keycaps Background -->
+    <rect x="800" y="40" width="60" height="50" class="key" />
+    <rect x="870" y="40" width="60" height="50" class="key" />
+    <rect x="940" y="40" width="60" height="50" class="key" />
+    <rect x="1010" y="40" width="60" height="50" class="key" />
+
+    <rect x="780" y="100" width="70" height="50" class="key" />
+    <rect x="860" y="100" width="60" height="50" class="key" />
+    <rect x="930" y="100" width="60" height="50" class="key" />
+    <rect x="1000" y="100" width="80" height="50" class="key" />
+
+    <rect x="790" y="160" width="80" height="50" class="key" />
+    <rect x="880" y="160" width="60" height="50" class="key" />
+    <rect x="950" y="160" width="120" height="50" class="key" />
+
+    <rect x="820" y="220" width="220" height="50" class="key" />
+  </g>
+
+  <!-- Dynamic Foreground Decorative Floating Keys (Far Right - No Text Obstruction) -->
+  <g class="key-active" filter="url(#glow)">
+    <rect x="1020" y="150" width="65" height="55" class="key" stroke="#06b6d4" />
+    <text x="1052" y="184" text-anchor="middle" fill="#06b6d4" font-family="monospace" font-weight="bold" font-size="20">⌘</text>
+  </g>
+  <g class="key-active-2" filter="url(#glow)">
+    <rect x="945" y="210" width="145" height="55" class="key" stroke="#ec4899" />
+    <text x="1017" y="244" text-anchor="middle" fill="#ec4899" font-family="monospace" font-weight="bold" font-size="16">SPACEBAR</text>
+  </g>
+
+  <!-- Left Side Accent Glow Pill -->
+  <rect x="60" y="48" width="240" height="32" rx="16" fill="#0f172a" stroke="url(#cyanPurple)" stroke-width="1.5" />
+  <text x="76" y="69" class="badge-text">⚡ AWESOME ECOSYSTEM</text>
+
+  <!-- Foreground Main Title & Subtitle (Clear, Crisp & Unobstructed) -->
+  <text x="60" y="130" class="title">Awesome Virtual Keyboard</text>
+  <text x="60" y="178" class="title" fill="url(#cyanPurple)">Software Directory ⌨️</text>
+
+  <text x="60" y="228" class="subtitle">Curated Privacy-First Keyboards, On-Screen Assistive Tech,</text>
+  <text x="60" y="254" class="subtitle">&amp; Multilingual Input Method Engines (IMEs)</text>
+
+  <!-- Bottom Accent Bar -->
+  <rect x="0" y="312" width="1200" height="8" rx="4" fill="url(#cyanPurple)" />
+</svg>
